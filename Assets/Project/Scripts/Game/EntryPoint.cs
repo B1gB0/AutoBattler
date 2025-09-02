@@ -1,6 +1,9 @@
 using UnityEngine;
 
-public class EntryPoint : MonoBehaviour
+namespace Project.Scripts.Game
 {
-    
+    public class EntryPoint : MonoBehaviour
+    {
+        
+    }
 }
