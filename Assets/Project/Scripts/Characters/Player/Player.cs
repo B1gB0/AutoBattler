@@ -1,7 +1,9 @@
-﻿namespace Project.Scripts.Characters.Player
+﻿using UnityEngine;
+
+namespace Project.Scripts.Characters.Player
 {
-    public class Player
+    public class Player : MonoBehaviour
     {
-        
+        private Character _character;
     }
 }

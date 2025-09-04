@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5308ea7ff60a2994cb6dd2a3ca9422ab, type: 3}
+  m_Name: DataContainer
+  m_EditorClassIdentifier: 
+  foldoutImportGUI: 1
+  documentId: 1QVlmxxEoNsDHavploN_H2dWZl6NWhfPPRHjgt7zjG5w
+  selectedTogglesIds:
+  - Enemies
+  - PlayerClasses
+  - Weapons
+  foldoutSerializationGUI: 1
+  serializationOutputPath: ../../Configs
+  serializationFileName: Configs.v0.1
+  serializationFormat: 0
+  _content:
+    Enemies:
+    - _id: goblin
+      _name: Goblin
+      _health: 5
+      _damage: 2
+      _power: 1
+      _endurance: 1
+      _agility: 1
+      _rewardedWeaponId: dagger
+    - _id: skeleton
+      _name: Skeleton
+      _health: 10
+      _damage: 2
+      _power: 2
+      _endurance: 1
+      _agility: 1
+      _rewardedWeaponId: club
+    - _id: slime
+      _name: Slime
+      _health: 8
+      _damage: 1
+      _power: 3
+      _endurance: 1
+      _agility: 2
+      _rewardedWeaponId: pike
+    - _id: ghost
+      _name: Ghost
+      _health: 6
+      _damage: 3
+      _power: 1
+      _endurance: 3
+      _agility: 1
+      _rewardedWeaponId: sword
+    - _id: golem
+      _name: Golem
+      _health: 10
+      _damage: 1
+      _power: 3
+      _endurance: 1
+      _agility: 3
+      _rewardedWeaponId: axe
+    - _id: dragon
+      _name: Dragon
+      _health: 20
+      _damage: 4
+      _power: 3
+      _endurance: 3
+      _agility: 3
+      _rewardedWeaponId: legendarySword
+    PlayerClasses:
+    - _id: rogue
+      _name: Rogue
+      _rewardedHealthForLevel: 4
+      _startWeaponId: dagger
+    - _id: warrior
+      _name: Warrior
+      _rewardedHealthForLevel: 5
+      _startWeaponId: sword
+    - _id: barbarian
+      _name: Barbarian
+      _rewardedHealthForLevel: 6
+      _startWeaponId: club
+    Weapons:
+    - _id: sword
+      _name: Sword
+      _damage: 3
+      _damageType: 1
+    - _id: club
+      _name: Club
+      _damage: 3
+      _damageType: 3
+    - _id: dagger
+      _name: Dagger
+      _damage: 2
+      _damageType: 2
+    - _id: axe
+      _name: Axe
+      _damage: 4
+      _damageType: 1
+    - _id: pike
+      _name: Pike
+      _damage: 3
+      _damageType: 2
+    - _id: legendarySword
+      _name: LegendarySword
+      _damage: 10
+      _damageType: 1

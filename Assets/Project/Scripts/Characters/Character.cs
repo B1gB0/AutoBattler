@@ -4,8 +4,7 @@ namespace Project.Scripts.Characters
 {
     public abstract class Character : MonoBehaviour
     {
-        protected int Power;
-        protected int Endurance;
-        protected int Agility;
+        [field: SerializeField] public Animator Animator { get; private set; }
+        [field: SerializeField] public Health.Health Health{ get; private set; }
     }
 }

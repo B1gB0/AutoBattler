@@ -1,6 +1,6 @@
 ﻿namespace Project.Scripts.Services
 {
-    public class IBattleService
+    public interface IBattleService
     {
         
     }

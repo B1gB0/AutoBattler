@@ -14,6 +14,13 @@
       "dependencies": {},
       "hash": "312131b3c5c8e9b2450b07a03f249bb3e21dcbcf"
     },
+    "com.norska-lib.spreadsheets": {
+      "version": "https://github.com/NorskaGames/NorskaLib.Spreadsheets.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "bf43763b1641023278d0f77a23dd2d3a9fcf3fbe"
+    },
     "com.unity.2d.animation": {
       "version": "9.0.3",
       "depth": 1,
