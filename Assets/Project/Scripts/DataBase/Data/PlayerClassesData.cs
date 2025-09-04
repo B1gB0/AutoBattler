@@ -9,11 +9,13 @@ namespace Project.Scripts.DataBase.Data
     {
         [SerializeField] private string _id;
         [SerializeField] private string _name;
+        [SerializeField] private string _description;
         [SerializeField] private int _rewardedHealthForLevel;
         [SerializeField] private string _startWeaponId;
 
         public string Id => _id;
         public string Name => _name;
+        public string Description => _description;
         public int RewardedHealthForLevel => _rewardedHealthForLevel;
         public string StartWeaponId => _startWeaponId;
     }

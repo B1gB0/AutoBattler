@@ -22,6 +22,56 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cf825fbf9b1e6d64c951e588cebf9b80
+    m_Address: ChoosingCharacterPanel
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e5a92abf5d72cd5458abb05f4c186d22
+    m_Address: barbarian
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3fd48731433609d4eb9bc2bd9af3dcc0
+    m_Address: rogue
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0ea4328181cf25a4f9f409754181d681
+    m_Address: warrior
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0fb66579a3dd10142bbd8a957761a4c2
+    m_Address: skeleton
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f205481edcdf2f842a265c81572c84b2
+    m_Address: goblin
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dc529a8455bbf854c8ac2be45b7e3bc8
+    m_Address: dragon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e3b2a62857ec15342a5247d980e1c70f
+    m_Address: ghost
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7de7d4465925b6548b1b70e71dcf8fc6
+    m_Address: slime
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a43bc50a19995d6458b04f42d191239a
+    m_Address: golem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 1fe900c8eb00cf34491b9aec6a134476, type: 2}
   m_SchemaSet:

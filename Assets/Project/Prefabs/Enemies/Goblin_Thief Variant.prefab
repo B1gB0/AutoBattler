@@ -75,5 +75,56 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1505905564021469714, guid: fe9f6acd2d5879a45897a3c86a4a5a2d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8082384781506221882}
+    - targetCorrespondingSourceObject: {fileID: 1505905564021469714, guid: fe9f6acd2d5879a45897a3c86a4a5a2d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -8122122989164603555}
   m_SourcePrefab: {fileID: 100100000, guid: fe9f6acd2d5879a45897a3c86a4a5a2d, type: 3}
+--- !u!4 &818896081812310841 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 301201267919940209, guid: fe9f6acd2d5879a45897a3c86a4a5a2d, type: 3}
+  m_PrefabInstance: {fileID: 1113331736313471304}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1987587654944461658 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1505905564021469714, guid: fe9f6acd2d5879a45897a3c86a4a5a2d, type: 3}
+  m_PrefabInstance: {fileID: 1113331736313471304}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8082384781506221882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987587654944461658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08e488f075f14f319dd2ff3aac9457e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _colorText: {r: 0, g: 0, b: 0, a: 0}
+  _value: 0
+  _hitEffectPrefab: {fileID: 19845262, guid: fdac75e990da47649b31f10049c400b0, type: 3}
+  _hitPoint: {fileID: 818896081812310841}
+--- !u!114 &-8122122989164603555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987587654944461658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea7af90a8b8f47cc94bfce62711a0654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Animator>k__BackingField: {fileID: 8531513258428099150}
+  <Health>k__BackingField: {fileID: 8082384781506221882}
+--- !u!95 &8531513258428099150 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8724984631126280966, guid: fe9f6acd2d5879a45897a3c86a4a5a2d, type: 3}
+  m_PrefabInstance: {fileID: 1113331736313471304}
+  m_PrefabAsset: {fileID: 0}

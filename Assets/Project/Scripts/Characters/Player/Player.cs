@@ -1,9 +1,12 @@
-﻿using UnityEngine;
-
-namespace Project.Scripts.Characters.Player
+﻿namespace Project.Scripts.Characters.Player
 {
-    public class Player : MonoBehaviour
+    public class Player
     {
         private Character _character;
+
+        public Player(Character character)
+        {
+            _character = character;
+        }
     }
 }

@@ -75,14 +75,17 @@ MonoBehaviour:
     PlayerClasses:
     - _id: rogue
       _name: Rogue
+      _description: Health - 4, weapon - dagger
       _rewardedHealthForLevel: 4
       _startWeaponId: dagger
     - _id: warrior
       _name: Warrior
+      _description: Health - 5, weapon - sword
       _rewardedHealthForLevel: 5
       _startWeaponId: sword
     - _id: barbarian
       _name: Barbarian
+      _description: Health - 6, weapon - club
       _rewardedHealthForLevel: 6
       _startWeaponId: club
     Weapons:
