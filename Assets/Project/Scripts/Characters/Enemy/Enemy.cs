@@ -1,4 +1,6 @@
-﻿namespace Project.Scripts.Characters.Enemy
+﻿using System;
+
+namespace Project.Scripts.Characters.Enemy
 {
     public abstract class Enemy : Character
     {
@@ -8,6 +10,21 @@
         {
             base.Construct(healthValue, damage, power, endurance, agility);
             RewardedWeaponId = rewardedWeaponId;
+        }
+
+        private void Start()
+        {
+            Health.Die += OnDie;
+        }
+
+        private void OnDestroy()
+        {
+            Health.Die -= OnDie;
+        }
+
+        private void OnDie()
+        {
+            Destroy(gameObject);
         }
     }
 }

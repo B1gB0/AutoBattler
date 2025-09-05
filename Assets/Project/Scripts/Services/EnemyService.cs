@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System;
+using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using Project.Scripts.Characters.Enemy;
 using Project.Scripts.DataBase.Data;
@@ -10,11 +10,10 @@ namespace Project.Scripts.Services
 {
     public class EnemyService : Service, IEnemyService
     {
-        private const int MinIndex = 0;
+        private readonly Dictionary<string, EnemyData> _allEnemiesData = new();
+        private readonly List<EnemyData> _availableEnemies = new();
         
-        private Dictionary<string, EnemyData> _enemiesData = new ();
         private IDataBaseService _dataBaseService;
-
         private EnemyFactory _enemyFactory;
 
         [Inject]
@@ -23,15 +22,17 @@ namespace Project.Scripts.Services
             _dataBaseService = dataBaseService;
         }
 
+        public event Action<Enemy> OnEnemyCreated;
         public Enemy CurrentEnemy { get; private set; }
 
         public override UniTask Init()
         {
             foreach (var enemy in _dataBaseService.Content.Enemies)
             {
-                _enemiesData.Add(enemy.Id, enemy);
+                _allEnemiesData.Add(enemy.Id, enemy);
+                _availableEnemies.Add(enemy);
             }
-            
+
             return UniTask.CompletedTask;
         }
 
@@ -40,24 +41,35 @@ namespace Project.Scripts.Services
             _enemyFactory = enemyFactory;
         }
 
-        public async UniTask CreateEnemy()
+        public async UniTask<Enemy> CreateEnemy()
         {
-            CurrentEnemy = await _enemyFactory.CreateEnemy(GetRandomEnemyData());
+            CurrentEnemy = await _enemyFactory.CreateEnemy(GetRandomEnemyDataWithoutRepetition());
+            OnEnemyCreated?.Invoke(CurrentEnemy);
+            return CurrentEnemy;
         }
 
-        private EnemyData GetRandomEnemyData()
+        private EnemyData GetRandomEnemyDataWithoutRepetition()
         {
-            int randomIndex = UnityEngine.Random.Range(MinIndex, _enemiesData.Count + 1);
-            
-            var keys = _enemiesData.Keys.ToList();
-
-            foreach (var data in _enemiesData)
+            if (_availableEnemies.Count == 0)
             {
-                _enemiesData.Remove(data.Key);
-                return _enemiesData[keys[randomIndex]];
+                ResetAvailableEnemies();
             }
+            
+            int randomIndex = UnityEngine.Random.Range(0, _availableEnemies.Count);
+            EnemyData selectedEnemy = _availableEnemies[randomIndex];
+            
+            _availableEnemies.RemoveAt(randomIndex);
+            
+            return selectedEnemy;
+        }
 
-            return null;
+        private void ResetAvailableEnemies()
+        {
+            _availableEnemies.Clear();
+            foreach (var enemy in _allEnemiesData.Values)
+            {
+                _availableEnemies.Add(enemy);
+            }
         }
     }
 }

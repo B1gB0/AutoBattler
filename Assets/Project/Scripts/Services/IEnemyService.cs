@@ -1,4 +1,5 @@
-﻿using Cysharp.Threading.Tasks;
+﻿using System;
+using Cysharp.Threading.Tasks;
 using Project.Scripts.Characters.Enemy;
 using Project.Scripts.Game.Factories;
 
@@ -8,7 +9,8 @@ namespace Project.Scripts.Services
     {
         public Enemy CurrentEnemy { get; }
         public UniTask Init();
-        public UniTask CreateEnemy();
+        public UniTask<Enemy> CreateEnemy();
         public void GetEnemyFactory(EnemyFactory enemyFactory);
+        public event Action<Enemy> OnEnemyCreated; 
     }
 }

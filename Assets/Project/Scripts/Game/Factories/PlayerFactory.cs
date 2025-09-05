@@ -42,12 +42,14 @@ namespace Project.Scripts.Game.Factories
                 _power, _endurance, _agility);
             
             Debug.Log("здоровье " + character.Health.TargetHealth);
-            Debug.Log("урон " + character.Health.TargetHealth);
+            Debug.Log("урон " + character.Damage);
             Debug.Log("текущий тип урона " + _weaponService.CurrentWeapon.DamageType);
             Debug.Log("текущее оружие " + _weaponService.CurrentWeapon.Name);
             Debug.Log("сила " + character.Power);
             Debug.Log("вынсоливость " + character.Endurance);
             Debug.Log("ловкость " + character.Agility);
+            
+            character.gameObject.SetActive(false);
 
             return character;
         }

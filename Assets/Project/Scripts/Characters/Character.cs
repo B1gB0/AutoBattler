@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Project.Scripts.Characters.Damage;
+using UnityEngine;
 
 namespace Project.Scripts.Characters
 {
@@ -7,6 +8,7 @@ namespace Project.Scripts.Characters
         [field: SerializeField] public Animator Animator { get; private set; }
         [field: SerializeField] public Health.Health Health{ get; private set; }
         
+        public float HealthValue { get; private set; }
         public int Damage { get; private set; }
         public int Power { get; private set; }
         public int Endurance { get; private set; }
@@ -14,11 +16,21 @@ namespace Project.Scripts.Characters
 
         public void Construct(float healthValue, int damage, int power, int endurance, int agility)
         {
-            Health.SetHealthValue(healthValue);
+            HealthValue = healthValue;
             Damage = damage;
             Power = power;
             Endurance = endurance;
             Agility = agility;
+        }
+
+        public virtual void TakeDamage(int damage)
+        {
+            Health.TakeDamage(damage);
+        }
+
+        public void SetStartHealth()
+        {
+            Health.SetHealthValue(HealthValue + Endurance);
         }
     }
 }

@@ -2,11 +2,11 @@
 {
     public class Player
     {
-        private Character _character;
+        public Character Character { get; private set; }
 
         public Player(Character character)
         {
-            _character = character;
+            Character = character;
         }
     }
 }

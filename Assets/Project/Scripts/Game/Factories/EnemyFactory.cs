@@ -26,7 +26,9 @@ namespace Project.Scripts.Game.Factories
             
             Enemy enemy = enemyTemplate.GetComponent<Enemy>();
             enemy.Construct(data.Health, data.Damage, data.Power, data.Endurance, data.Agility, data.RewardedWeaponId);
-            
+
+            enemy.gameObject.SetActive(false);
+
             return enemy;
         }
     }
