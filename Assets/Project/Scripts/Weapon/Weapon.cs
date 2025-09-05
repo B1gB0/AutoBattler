@@ -2,15 +2,17 @@
 
 namespace Project.Scripts.Weapon
 {
-    public abstract class Weapon
+    public class Weapon
     {
-        protected int Damage;
-        protected DamageType DamageType;
-
-        protected Weapon(int damage, DamageType damageType)
+        public Weapon(int damage, DamageType damageType, string name)
         {
             Damage = damage;
             DamageType = damageType;
+            Name = name;
         }
+        
+        public int Damage { get; private set; }
+        public DamageType DamageType { get; private set; }
+        public string Name { get; private set; }
     }
 }

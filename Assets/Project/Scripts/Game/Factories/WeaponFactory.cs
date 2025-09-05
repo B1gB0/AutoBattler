@@ -1,17 +1,16 @@
-﻿using Project.Scripts.Services;
-using Reflex.Attributes;
+﻿using Project.Scripts.DataBase.Data;
 using UnityEngine;
 
 namespace Project.Scripts.Game.Factories
 {
     public class WeaponFactory : MonoBehaviour
     {
-        private IResourceService _resourceService;
-        
-        [Inject]
-        public void Construct(IResourceService resourceService)
+        public Weapon.Weapon _currentWeapon { get; private set; }
+
+        public Weapon.Weapon CreateWeapon(WeaponData data)
         {
-            _resourceService = resourceService;
+            _currentWeapon = new (data.Damage, data.DamageType, data.Name);
+            return _currentWeapon;
         }
     }
 }

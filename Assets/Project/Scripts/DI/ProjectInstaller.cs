@@ -12,6 +12,7 @@ namespace Project.Scripts.DI
             builder.AddSingleton(typeof(DataBaseService), typeof(IDataBaseService));
             builder.AddSingleton(typeof(EnemyService), typeof(IEnemyService));
             builder.AddSingleton(typeof(BattleService), typeof(IBattleService));
+            builder.AddSingleton(typeof(WeaponService), typeof(IWeaponService));
         }
     }
 }

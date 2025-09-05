@@ -27,16 +27,19 @@ namespace Project.Scripts.Game
 
         private IDataBaseService _dataBaseService;
         private IEnemyService _enemyService;
+        private IWeaponService _weaponService;
         private IBattleService _battleService;
         
         private ChoosingCharacterPanel _choosingCharacterPanel;
         
         [Inject]
-        private void Construct(IDataBaseService dataBaseService, IEnemyService enemyService, IBattleService battleService)
+        private void Construct(IDataBaseService dataBaseService, IEnemyService enemyService,
+            IBattleService battleService, IWeaponService weaponService)
         {
             _dataBaseService = dataBaseService;
             _enemyService = enemyService;
             _battleService = battleService;
+            _weaponService = weaponService;
         }
 
         private async void Start()
@@ -48,9 +51,12 @@ namespace Project.Scripts.Game
 
             _choosingCharacterPanel = 
                 await _uiFactory.CreateChoosingCharacterPanel(_canvas.transform);
+
+            await _weaponService.Init();
+            await _enemyService.Init();
             
             _enemyService.GetEnemyFactory(_enemyFactory);
-            await _enemyService.Init();
+            _weaponService.GetWeaponFactory(_weaponFactory);
 
             await _enemyService.CreateEnemy();
             

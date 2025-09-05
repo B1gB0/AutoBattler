@@ -23,7 +23,7 @@ namespace Project.Scripts.Services
             _dataBaseService = dataBaseService;
         }
 
-        public Enemy CurrentEnemy { get; }
+        public Enemy CurrentEnemy { get; private set; }
 
         public override UniTask Init()
         {
@@ -42,12 +42,12 @@ namespace Project.Scripts.Services
 
         public async UniTask CreateEnemy()
         {
-            await _enemyFactory.CreateEnemy(GetRandomEnemyData().Id);
+            CurrentEnemy = await _enemyFactory.CreateEnemy(GetRandomEnemyData());
         }
 
         private EnemyData GetRandomEnemyData()
         {
-            int randomIndex = UnityEngine.Random.Range(MinIndex, _enemiesData.Count);
+            int randomIndex = UnityEngine.Random.Range(MinIndex, _enemiesData.Count + 1);
             
             var keys = _enemiesData.Keys.ToList();
 

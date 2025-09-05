@@ -4,7 +4,7 @@ namespace Project.Scripts.Weapon
 {
     public class Axe : Weapon
     {
-        public Axe(int damage, DamageType damageType) : base(damage, damageType)
+        public Axe(int damage, DamageType damageType, string name) : base(damage, damageType, name)
         {
         }
     }
