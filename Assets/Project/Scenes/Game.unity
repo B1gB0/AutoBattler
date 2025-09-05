@@ -367,7 +367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rootBackground: {fileID: 176143595}
-  _battleButton: {fileID: 0}
+  _battleButton: {fileID: 838022291}
 --- !u!1 &765341701
 GameObject:
   m_ObjectHideFlags: 0
@@ -869,6 +869,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95f51702d06df0d42a0601947e4c3c72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerPosition: {fileID: 1742198925}
+  _playerAttackPosition: {fileID: 1568713223}
+  _enemyPosition: {fileID: 1229980237}
+  _enemyAttackPosition: {fileID: 175330659}
   _canvas: {fileID: 913786075}
   _uiRoot: {fileID: 654526874}
   _enemyFactory: {fileID: 1350322177}
